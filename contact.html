@@ -1,0 +1,71 @@
+<!-------w---------
+
+    Project 2 
+    Name: Zach Jordan
+    Date: 2023 08 21
+    Description: This page has a basic emailed message form that the user can use to contact the client with a message.
+
+------------------>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="emailjs_config.js"></script>
+    <script src="script.js"></script>
+    <script src="hamburger.js"></script>
+    <title>Kyle Peters - Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div id="overlay" class="overlay"></div>
+    <header>
+        <h1 id="page_title">KYLE PETERS</h1>
+        <nav>
+            <div class="hamburger">
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+            </div>
+            <ul id="nav_links">
+                <li class="list_links"><a href="index.html">HOME</a></li>
+                <li class="list_links"><a href="about.html">ABOUT</a></li>
+                <li class="list_links"><a href="contact.html">CONTACT</a></li>
+                <li class="icon_links"><a href="https://twitter.com/Kyle_peters__" class="fa fa-twitter"></a></li>
+                <li class="social_links"><a href="https://twitter.com/Kyle_peters__">TWITTER</a></li>
+                <button id="closeButton">X</button>
+            </ul>
+        </nav>
+    </header>
+    <container id="contact_content">
+        <form id="form">
+           <ol>
+                <li>
+                    <label for="name_input">FULL NAME</label>
+                    <input type="text" autofocus id="name_input" name="name_input" />
+                </li>
+                <li>
+                    <div class="error" id="name_input_error">PLEASE ENTER YOUR NAME</div>
+                </li>
+                <li>
+                    <label for="email_input">EMAIL</label>
+                    <input type="email" id="email_input" name="email_input" />
+                </li>
+                <li>
+                    <div class="error" id="email_input_error">PLEASE ENTER AN EMAIL</div>
+                </li>
+                <li>
+                    <label for="msg_input">WHAT WOULD YOU LIKE TO KNOW?</label>
+                    <textarea id="msg_input" name="msg_input"></textarea>
+                </li>
+                <li>
+                    <div class="error" id="msg_input_error">PLEASE LEAVE A MESSAGE</div>
+                </li>
+             </ol>
+           <button id="submit_button" type="submit">SUBMIT</button>
+        </form> 
+    </container>
+</body>
+</html>

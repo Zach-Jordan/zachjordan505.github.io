@@ -1,0 +1,432 @@
+/******w***********
+    
+    Project 2 Stylesheet
+    Name: Zach Jordan
+    Date: 2023 08 21
+    Description: These are all the styles for all 3 webpages as well as their media queries.
+
+******************/
+
+/* styles for all pages */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(240, 240, 240);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px 0 100px;
+}
+
+header h1 {
+    white-space: nowrap;
+    font-size: 75px;
+    margin-bottom: 20px;
+    letter-spacing: 10px;
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.list_links, .icon_links {
+    list-style: none;
+    font-size: 20px;
+    letter-spacing: 10px;
+    padding-right: 90px;
+    padding-left: 20px;
+}
+
+.social_links {
+    font-size: 20px;
+    letter-spacing: 10px;
+    display: none;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.5s ease-in-out;
+}
+
+header ul li a:hover {
+    color: rgb(155, 155, 155);
+}
+
+/* Hamburger Styles */
+#closeButton {
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+}
+
+.hamburger {
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.hamburger-line {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 3px 0;
+}
+
+/* Home page styles */
+#home_photos {
+    float: right;
+}
+#home_photo1 {
+    height: 650px;
+    right: 0;
+    bottom: 0;
+    padding-right: 250px;
+    padding-top: 20px;
+}
+
+#home_info {
+    width: 750px;
+    padding-left: 100px;
+    padding-bottom: 100px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+#home_info h2 {
+    font-size: 60px;
+    letter-spacing: 10px;
+}
+
+#home_content ul {
+    display: flex;
+    padding: 0;
+}
+
+#home_content ul li {
+    font-size: 20px;
+    letter-spacing: 3px;
+    margin: 0;
+    padding-right: 50px;
+    letter-spacing: 10px;
+}
+
+/* About page styles */
+#about_photo1 {
+    height: 700px;
+    padding-top: 50px;
+    float: right;
+}
+
+#about_info {
+    width: 1000px;
+    padding-left: 100px;
+    padding-top: 100px;
+}
+
+#about_info p {
+    font-size: 20px;
+    letter-spacing: 6px;
+    line-height: 35px;
+    padding-bottom: 20px;
+}
+
+/* Contact page styles */
+#contact_photo1 {
+    height: 600px;
+    padding-top: 50px;
+    float: right;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form ol {
+    padding: 0;
+}
+form ol li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    font-size: 20px;
+    letter-spacing: 10px;
+}
+
+label {
+    padding-top: 50px;
+    padding-bottom: 15px;
+    align-items: center;
+}
+
+input, textarea {
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(179, 179, 179);
+}
+
+#name_input, #email_input {
+    width: 250px;
+    height: 20px;
+}
+
+#msg_input {
+    width: 400px;
+    height: 150px;
+}
+
+button {
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(207, 207, 207);
+}
+
+/* Error messages */
+form .error {
+    visibility: hidden;
+    color: red;
+    font-size: 15px;
+}
+
+/* Media Queries */
+@media screen and (min-width: 1367px) and (max-width: 1920px) {
+    header h1 {
+        font-size: 50px;
+    }
+
+    .list_links {
+        font-size: 13px;
+        padding-right: 60px;
+    }
+
+    .icon_links {
+        font-size: 13px;
+    }
+
+    /* Home page styles */
+    #home_photo1 {
+        height: 450px;
+        padding-bottom: 150px;
+        padding-right: 210px;
+    }
+
+    #home_info h2 {
+        font-size: 37px;
+    }
+
+    #home_content ul li {
+        font-size: 12px;
+        padding-right: 40px;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+    header {
+        padding: 10px 75px 0 75px;
+    }
+
+    header h1 {
+        font-size: 40px;
+    }
+
+    .list_links {
+        font-size: 10px;
+        padding-right: 45px;
+    }
+
+    .icon_links {
+        font-size: 10px;
+    }
+
+    /* Home page styles */
+    #home_photo1 {
+        height: 325px;
+        padding-right: 150px;
+        padding-bottom: 175px;
+    }
+
+    #home_info {
+        width: 700px;
+        padding-left: 75px;
+        padding-bottom: 75px;
+    }
+
+    #home_info h2 {
+        font-size: 32px;
+    }
+
+    #home_content ul li {
+        font-size: 10px;
+        padding-right: 40px;
+    }
+
+    /* About style */
+    #about_photo1 {
+        height: 500px;
+        padding-top: 125px;
+        padding-left: 50px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+    header h1 {
+        margin-bottom: 20px;
+    }
+
+    #nav_links {
+        position: fixed;
+        align-items: center;
+        justify-content: center;
+        top: 50%;
+        left: 50%;
+        height: 100vh;
+        width: 100vw;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.415);
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        z-index: 1;
+    }
+
+    .list_links {
+        padding-top: 100px;
+        padding: 0;
+        margin: 0;
+        height: 40px;
+    }
+
+    .social_links {
+        height: 40px;
+    }
+
+    header ul li a {
+        color: rgb(230, 230, 230);
+    }
+
+    header ul li a:hover {
+        color: rgb(255, 255, 255);
+    }
+
+    .icon_links {
+        display: none;
+    }
+
+    /* Hamburger Styles */
+    .hamburger {
+        display: flex;
+    }
+
+    #nav_links.show {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #closeButton.show {
+        display: block;
+    }
+
+    /* Home page styles */
+    #home_photos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #home_photo1 {
+        height: 500px;
+        position: absolute;
+        top: 45%;
+        left: 60%;
+        transform: translate(-50%, -50%);
+    }
+
+    #home_info {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        padding-bottom: 25px;
+        text-align: center;
+        justify-content: center;
+        padding-left: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        align-items: center;
+    }
+
+    #home_info h2 {
+        font-size: 50px;
+    }
+
+    #home_info ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #home_info ul li:last-child {
+        padding-right: 0;
+    }
+
+    /* About styles */
+    #about_photo1 {
+        height: 500px;
+        padding-top: 50px;
+        padding-left: 20px;
+        float: right;
+    }
+
+    #about_info {
+        padding-left: 100px;
+        padding-top: 100px;
+    }
+
+    #about_info p {
+        font-size: 16px;
+        letter-spacing: 1px;
+        line-height: 35px;
+        padding-bottom: 20px;
+    }
+
+    /* Form */
+    form {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+    }
+}
