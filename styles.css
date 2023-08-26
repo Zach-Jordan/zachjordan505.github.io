@@ -18,22 +18,23 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; 
     padding: 10px 100px 0 100px;
 }
 
 header h1 {
     white-space: nowrap;
     font-size: 75px;
-    margin-bottom: 20px;
+    margin-bottom: 20px; 
     letter-spacing: 10px;
 }
 
 header ul {
     display: flex;
     align-items: center;
-    margin: 0;
+    margin: auto; 
     padding: 0;
+    margin: 0;
 }
 
 #overlay {
@@ -45,18 +46,23 @@ header ul {
     height: 100%;
 }
 
-.list_links, .icon_links {
+.list_links {
     list-style: none;
     font-size: 20px;
     letter-spacing: 10px;
     padding-right: 90px;
-    padding-left: 20px;
 }
 
 .social_links {
     font-size: 20px;
     letter-spacing: 10px;
     display: none;
+}
+
+.icon_links {
+    list-style: none;
+    font-size: 20px;
+    padding-left: 20px;
 }
 
 header ul li a {
@@ -69,7 +75,6 @@ header ul li a:hover {
     color: rgb(155, 155, 155);
 }
 
-/* Hamburger Styles */
 #closeButton {
     display: none;
     background-color: transparent;
@@ -81,12 +86,12 @@ header ul li a:hover {
 
 .hamburger {
     position: fixed;
-    display: none;
+    display: none; 
     flex-direction: column;
     cursor: pointer;
-    align-items: center;
-    justify-content: center;
-    margin-right: 20px;
+    align-items: center; 
+    justify-content: center; 
+    margin-right: 20px; 
 }
 
 .hamburger-line {
@@ -122,13 +127,13 @@ header ul li a:hover {
     letter-spacing: 10px;
 }
 
-#home_content ul {
+#home_content ul{
     display: flex;
     padding: 0;
-    list-style: none;
 }
 
 #home_content ul li {
+    list-style: none;
     font-size: 20px;
     letter-spacing: 3px;
     margin: 0;
@@ -188,14 +193,26 @@ label {
     align-items: center;
 }
 
-input, textarea {
+input {
     font-size: 15px;
     padding: 5px;
+    text-align: center;
     border-radius: 5px;
     border: 1px solid rgb(179, 179, 179);
 }
 
-#name_input, #email_input {
+textarea {
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#name_input {
+    width: 250px;
+    height: 20px;
+}
+
+#email_input {
     width: 250px;
     height: 20px;
 }
@@ -214,27 +231,29 @@ button {
 }
 
 /* Error messages */
-form .error {
+form .error{
     visibility: hidden;
     color: red;
     font-size: 15px;
-}
+} 
 
-/* Media Queries */
 @media screen and (min-width: 1367px) and (max-width: 1920px) {
     header h1 {
         font-size: 50px;
+        margin-bottom: 20px; 
+        letter-spacing: 8px;
     }
 
     .list_links {
         font-size: 13px;
+        letter-spacing: 7px;
         padding-right: 60px;
     }
-
+    
     .icon_links {
         font-size: 13px;
+        padding-left: 17px;
     }
-
     /* Home page styles */
     #home_photo1 {
         height: 450px;
@@ -244,16 +263,18 @@ form .error {
 
     #home_info h2 {
         font-size: 37px;
+        letter-spacing: 10px;
     }
-
+    
     #home_content ul li {
         font-size: 12px;
         padding-right: 40px;
+        letter-spacing: 8px;
     }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1366px) {
-    header {
+    header { 
         padding: 10px 75px 0 75px;
     }
 
@@ -263,11 +284,13 @@ form .error {
 
     .list_links {
         font-size: 10px;
+        letter-spacing: 7px;
         padding-right: 45px;
     }
-
+    
     .icon_links {
         font-size: 10px;
+        padding-left: 12px;
     }
 
     /* Home page styles */
@@ -285,11 +308,13 @@ form .error {
 
     #home_info h2 {
         font-size: 32px;
+        letter-spacing: 8px;
     }
-
+    
     #home_content ul li {
         font-size: 10px;
         padding-right: 40px;
+        letter-spacing: 7px;
     }
 
     /* About style */
@@ -318,7 +343,7 @@ form .error {
         flex-direction: column;
         align-items: center;
         display: none;
-        z-index: 1;
+        z-index: 1; /* Add this line to adjust the z-index */
     }
 
     .list_links {
@@ -333,26 +358,30 @@ form .error {
     }
 
     header ul li a {
+        text-decoration: none;
         color: rgb(230, 230, 230);
+        transition: color 0.5s ease-in-out;
     }
-
+    
     header ul li a:hover {
         color: rgb(255, 255, 255);
     }
-
+    
+    /* Hide the social media icons */
     .icon_links {
         display: none;
     }
-
-    /* Hamburger Styles */
+    
+    /* Show the hamburger button */
     .hamburger {
         display: flex;
     }
-
+    
+    /* Show the navigation list when the hamburger button is clicked */
     #nav_links.show {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; 
+        align-items: center; 
     }
 
     #closeButton.show {
@@ -364,8 +393,9 @@ form .error {
         display: flex;
         justify-content: center;
         align-items: center;
+        
     }
-
+    
     #home_photo1 {
         height: 500px;
         position: absolute;
@@ -390,12 +420,12 @@ form .error {
     #home_info h2 {
         font-size: 50px;
     }
-
+    
     #home_info ul {
         list-style: none;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: center; 
     }
 
     #home_info ul li:last-child {
@@ -414,7 +444,7 @@ form .error {
         padding-left: 100px;
         padding-top: 100px;
     }
-
+    
     #about_info p {
         font-size: 16px;
         letter-spacing: 1px;
@@ -430,4 +460,5 @@ form .error {
         transform: translate(-50%, -50%);
         white-space: nowrap;
     }
+    
 }
